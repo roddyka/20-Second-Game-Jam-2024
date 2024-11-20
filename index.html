@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Defuse or Boom</title>
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3/dist/phaser.min.js"></script>
+    <script src="game.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white flex items-center justify-center min-h-screen">
+    <!-- Container principal -->
+    <div class="flex ">
+        <!-- Painel lateral -->
+        <div class=" bg-gray-800 p-4 rounded-l-lg shadow-lg flex flex-col justify-between">
+            <h2 class="text-xl font-bold mb-4 text-center">Painel de Progresso</h2>
+            <div>
+                <h3 class="text-lg font-semibold mb-2">Itens Coletados</h3>
+                <ul id="itemsList" class="list-disc ml-5 text-gray-300 h-40 overflow-y-auto">
+                    <!-- Os itens coletados aparecerão aqui -->
+                </ul>
+            </div>
+            <div class="mt-6">
+                <h3 class="text-lg font-semibold mb-2">Status da Bomba</h3>
+                <p id="bombStatus" class="text-gray-300">Progresso: 0%</p>
+            </div>
+            <div class="mt-6">
+                <p id="timer" class="text-lg font-bold text-center bg-black py-2 rounded">
+                    Time Left: 20s
+                </p>
+            </div>
+            <div class="mt-6 flex justify-center">
+                <button id="startButton" class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition" onclick="Start()">Iniciar Jogo</button>
+            </div>
+        </div>
+
+        <!-- Canvas do jogo -->
+        <!-- <div class="flex-grow bg-black rounded-r-lg shadow-lg relative"> -->
+            <!-- O Canvas será gerado automaticamente pelo Phaser -->
+        <!-- </div> -->
+    </div>
+</body>
+</html>
